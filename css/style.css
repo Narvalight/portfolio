@@ -1,0 +1,5 @@
+/* Couleur de fond légèrement plus claire que le bg-dark */
+.bg-custom-dark {
+    background-color: #2c3034; /* Un gris anthracite très proche mais distinct */
+    color: #f8f9fa; /* On force le texte en blanc cassé pour la lisibilité */
+}
