@@ -8,20 +8,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100 bg-custom-dark">
 
     <!-- <div id="navbar-placeholder"></div> -->
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.html">MonPortfolio</a>
+            <a class="navbar-brand" href="index.html">Portfolio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="presentation.html">Moi & CV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="presentation.html">Moi & CV</a></li>
                     <li class="nav-item"><a class="nav-link" href="projets.html">Réalisations</a></li>
                     <li class="nav-item"><a class="nav-link" href="veille-info.html">Veille</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -30,13 +30,87 @@
         </div>
     </nav>
 
-    <main class="container py-5 flex-grow-1">
-        <div class="row align-items-center">
+    <main class="flex-grow-1">
 
+        <div class="container py-5">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1 class="fw-bold mb-4">Qui suis-je ?</h1>
+                    <p class="lead">
+                        Je m'appelle Tristan Blain. Actuellement en BTS SIO, je suis un passionné de développement. 
+                    </p>
+                    <p>
+                        De nature curieuse et rigoureuse, j'ai choisi ce domaine car j'aime l'idée de résoudre des problèmes complexes par la technologie. Mon objectif est de devenir développeur pour contribuer à des projets innovants.
+                    </p>
+                </div>
+            </div>
         </div>
+
+        <div class="bg-custom-dark text-white py-5">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-md-6 mb-4">
+                        <h2 class="h4 mb-4 border-bottom pb-2 text-orange">Ma Formation</h2>
+                        
+                        <div class="mb-5">
+                            <h5>BTS SIO - Option SLAM</h5>
+                            <p class="mb-1 text-secondary">Lycée Savary de Mauléon - Les Sables d'Olonnes | 2025 - Aujourd'hui</p>
+                            <div class="bg-custom-light-dark rounded-5 px-3 py-2">
+                                <p class="small">Spécialisation dans le développement d'applications et la gestion de projets logiciels.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-5">
+                            <h5>Baccalauréat Général.</h5>
+                            <p class="mb-1 text-secondary">Lycée Notre-Dame - Challans | 2022-2025</p>
+                            <div class="bg-custom-light-dark rounded-5 px-3 py-2">
+                                <p class="small">Mention Bien.<br> Spécialités : <br> - Numériques et Sciences Informatiques (NSI) <br> - Histoire-Géographie Géopolitique et Sciences Politiques. (HGGSP)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+                        <h2 class="h4 mb-4 border-bottom pb-2 text-orange">Expériences Pro</h2>
+                        
+                        <div class="mb-5">
+                            <h5>Emploi Saisonnier - Agent d'entretien</h5>
+                            <p class="mb-1 text-secondary">Entreprise Camping les Biches - Le Pissot (Saint-Hilaire de Riez) | Juillet - Août 2025</p>
+                            <div class="bg-custom-light-dark rounded-5 px-3 py-2">
+                                <p class="small">Ménage dans les mobilhomes, nettoyage des sanitaires et des voies du camping.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-5">
+                            <h5>Stage - Initiation au développement informatique.</h5>
+                            <p class="mb-1 text-secondary">Entreprise Jack In the Box (Groupe Xait) | Mars 2023</p>
+                            <div class="bg-custom-light-dark rounded-5 px-3 py-2">
+                                <p class="small">Réalisation d'un CV sous format site web avec HTML / CSS. <br> Initiation au Javasript.</p>
+                            </div>
+                        </div>
+
+                        <div class="mb-5">
+                            <h5>Stage - Découverte des métiers de l'informatique.</h5>
+                            <p class="mb-1 text-secondary">Entreprise Jack In the Box (Groupe Xait) | Mars 2022</p>
+                            <div class="bg-custom-light-dark rounded-5 px-3 py-2">
+                                <p class="small">Découverte des différents métiers de l'informatique. <br> Initiation au Python.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <hr class="my-4 mx-1 border-3 rounded-5 border-secondary">
+            </div>
+        </div>
+
+        <div class="container pb-5 text-center">
+            <p>Pour plus de détails, n'hésitez pas à télécharger mon CV complet.</p>
+            <a href="assets/mon-cv.pdf" target="_blank" class="btn btn-outline-light">Télécharger mon CV (PDF)</a>
+        </div>
+
     </main>
 
-    <footer class="bg-dark py-4 border-top text-white">
+    <footer class="bg-dark py-4 text-white">
         <div class="container text-center">
             <p class="mb-0 text-secondary">© 2025 - Portfolio BTS SIO - Hébergé sur GitHub Pages</p>
         </div>

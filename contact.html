@@ -8,13 +8,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100 bg-custom-dark text-white">
 
     <!-- <div id="navbar-placeholder"></div> -->
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.html">MonPortfolio</a>
+            <a class="navbar-brand" href="index.html">Portfolio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -30,13 +30,70 @@
         </div>
     </nav>
 
-    <main class="container py-5 flex-grow-1">
-        <div class="row align-items-center">
+    <main class="flex-grow-1 container py-5">
+        <div class="text-center mb-5">
+            <h1 class="fw-bold">Me contacter</h1>
+            <p class="text-muted">Une question ou une proposition ? N'hésitez pas à m'envoyer un message.</p>
+        </div>
 
+        <div class="row g-5">
+            <div class="col-md-7">
+                <div class="card shadow-sm border-0 p-4">
+                    <form action="https://formspree.io/f/ton_identifiant" method="POST">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nom complet</label>
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Ex: Jean Dupont" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Adresse Email</label>
+                            <input type="email" name="_replyto" class="form-control" id="email" placeholder="nom@exemple.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea name="message" class="form-control" id="message" rows="5" placeholder="Votre message ici..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="bg-custom-dark text-white p-4 rounded shadow-sm h-100">
+                    <h3 class="h4 mb-4">Mes coordonnées</h3>
+                    
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-envelope-fill text-primary fs-4 me-3"></i>
+                        <div>
+                            <p class="mb-0 fw-bold">Email</p>
+                            <a href="mailto:ton.email@exemple.com" class="text-secondary text-decoration-none small">ton.email@exemple.com</a>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-linkedin text-primary fs-4 me-3"></i>
+                        <div>
+                            <p class="mb-0 fw-bold">LinkedIn</p>
+                            <a href="#" class="text-secondary text-decoration-none small">linkedin.com/in/ton-profil</a>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-geo-alt-fill text-primary fs-4 me-3"></i>
+                        <div>
+                            <p class="mb-0 fw-bold">Localisation</p>
+                            <p class="text-secondary small mb-0">Ville, France</p>
+                        </div>
+                    </div>
+
+                    <hr class="my-4 border-secondary">
+                    
+                    <p class="small text-muted italic">Je réponds généralement sous 24 à 48 heures.</p>
+                </div>
+            </div>
         </div>
     </main>
 
-    <footer class="bg-dark py-4 border-top text-white">
+    <footer class="bg-dark py-4 text-white">
         <div class="container text-center">
             <p class="mb-0 text-secondary">© 2025 - Portfolio BTS SIO - Hébergé sur GitHub Pages</p>
         </div>
