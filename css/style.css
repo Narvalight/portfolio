@@ -10,5 +10,13 @@
 }
 
 .text-orange {
-    color: #ed8937; /* On force le texte en blanc cassé pour la lisibilité */
+    color: #ed8937;
+}
+
+/* Bordure orange à gauche uniquement style Bootstrap */
+.border-orange-start {
+    border-left: 5px solid #fd7e14 !important;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
 }

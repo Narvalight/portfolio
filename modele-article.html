@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Contact</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100 bg-custom-dark text-white"></body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="presentation.html">Moi & CV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projets.html">Réalisations</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="veille-info.html">Veille</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <div id="navbar-placeholder"></div> -->
+     <main class="flex-grow-1 container py-5 text-white">
+
+        <div class="py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h2 class="h3 fw-bold mb-3 border-orange-left ps-3">1. Contexte et Objectifs</h2>
+                        <p>Explique ici pourquoi tu as fait ce projet ou pourquoi tu as choisi ce sujet de veille. Quel était le problème à résoudre ?</p>
+
+                        <h2 class="h3 fw-bold mt-5 mb-3 border-orange-left ps-3">2. Travail Réalisé</h2>
+                        <p>Détaille tes étapes. Si c'est un projet SIO, parle des langages utilisés (PHP, Java, SQL, etc.).</p>
+                        
+                        <div class="bg-dark text-light p-3 rounded my-4 shadow-sm">
+                            <pre class="mb-0"><code>// Exemple de code si c'est une réalisation
+                            public function processOrder($id) {
+                                return $this->db->query("SELECT * FROM orders WHERE id = $id");
+                            }</code></pre>
+                        </div>
+
+                        <h2 class="h3 fw-bold mt-5 mb-3 border-orange-left ps-3">3. Bilan et Analyse</h2>
+                        <p>Qu'as-tu appris ? Quelles difficultés as-tu rencontrées ? C'est la partie préférée du jury !</p>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card shadow-sm rounded shadow border border-secondary border-opacity-25 sticky-top bg-custom-light-dark" style="top: 20px;">
+                            <div class="card-body">
+                                <h5 class="fw-bold">Infos clés</h5>
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-2 ms-2"><strong>Outils :</strong> Visual Studio Code, Git</li>
+                                    <li class="mb-2 ms-2"><strong>Compétences :</strong> Développement Web, SQL</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5 pt-4 border-top">
+                    <a href="projets.html" class="btn btn-outline-light">Retour aux réalisations</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark py-4 text-white">
+        <div class="container text-center">
+            <p class="mb-0 text-secondary">© 2025 - Portfolio BTS SIO - Hébergé sur GitHub Pages</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
