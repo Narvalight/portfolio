@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Réalisations</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100 bg-custom-dark text-white"></body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../presentation.html">Moi & CV</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../projets.html">Réalisations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../veille-info.html">Veille</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <div id="navbar-placeholder"></div> -->
+     <main class="flex-grow-1 container py-5 text-white">
+
+        <div class="py-3">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-9 order-2 order-lg-1">
+                        
+                        <h2 class="h3 fw-bold mb-3 border-orange-start ps-3">Contexte du projet</h2>
+                        <p>Dans le but de professionnaliser la gestion des services informatiques de l'entreprise TechServices, j'ai réalisé une étude comparative de trois solutions majeures du marché. L'enjeu était de remplacer un suivi manuel sur Excel par un outil aligné sur les bonnes pratiques <strong>ITIL</strong>, notamment pour la gestion de la <strong>CMDB</strong> (Base de données de gestion de configuration).</p>
+
+                        <h2 class="h3 fw-bold mt-5 mb-3 border-orange-start ps-3" >Analyse des solutions retenues</h2>
+                        <div class="row g-3 mt-2">
+                            <div class="col-md-12">
+                                <div class="p-3 border rounded shadow-sm">
+                                    <h5 class="fw-bold text-orange">GLPI (Open Source)</h5>
+                                    <p><strong>Modèle :</strong> Logiciel libre et gratuit, sans frais de licence.</p>
+                                    <p>Solution française incontournable, GLPI place l'inventaire au cœur du système avec une CMDB très bien alignée sur le suivi des actifs matériels, des licences et des contrats. Elle offre un Helpdesk robuste pour la gestion des incidents et des demandes d'assistance.</p>
+                                    <p><strong>Points critiques :</strong> L'absence d'éditeur implique que l'installation et la maintenance sont à la charge exclusive de l'entreprise. De plus, l'inventaire automatique nécessite l'intégration d'agents externes comme FusionInventory, ce qui complexifie la mise en œuvre initiale.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="p-3 border rounded shadow-sm">
+                                    <h5 class="fw-bold text-orange">Freshservice (SaaS)</h5>
+                                    <p><strong>Modèle :</strong> Commercial SaaS par abonnement (clé en main).</p>
+                                    <p>Cette plateforme unifiée se distingue par un excellent alignement ITIL, intégrant des workflows structurés pour les incidents, problèmes et changements. Sa CMDB dynamique cartographie automatiquement les dépendances entre les actifs informatiques et les services métiers, simplifiant grandement l'analyse d'impact.</p>
+                                    <p><strong>Atouts majeurs :</strong> Son interface moderne et intuitive facilite l'adoption rapide par les équipes. La solution inclut désormais des fonctionnalités d’intelligence artificielle pour automatiser les tâches récurrentes.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="p-3 border rounded shadow-sm">
+                                    <h5 class="fw-bold text-orange">Service Desk Plus (Hybride)</h5>
+                                    <p><strong>Modèle :</strong> Commercial (On-Premise ou Cloud) avec licence ou abonnement.</p>
+                                    <p>C'est une plateforme ITSM/ITAM complète proposant des modules dédiés pour chaque processus ITIL. Pour la gestion de parc, elle intègre nativement des outils de découverte réseau pour l'inventaire automatique du matériel et des logiciels, ainsi qu'un suivi performant des contrats.</p>
+                                    <p><strong>Ergonomie :</strong> Bien que l'interface soit jugée plus classique que celle de Freshservice, elle offre une grande capacité de personnalisation pour s'adapter aux politiques de sécurité et aux besoins spécifiques de l'entreprise.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2 class="h3 fw-bold mt-5 mb-3 border-orange-start ps-3">Recommandation : Freshservice</h2>
+                        <p>Après analyse, j'ai recommandé l'adoption de <strong>Freshservice</strong> pour répondre aux besoins de TechServices.</p>
+                        <p>Ce choix se justifie par plusieurs points critiques :</p>
+                        <ul>
+                            <li><strong>Facilité d'adoption :</strong> Une interface intuitive facilitant la transition des équipes habituées à Excel. </li>
+                            <li><strong>CMDB Dynamique :</strong> Elle remplace avantageusement le suivi manuel en cartographiant automatiquement les dépendances entre actifs et services métiers.</li>
+                            <li><strong>Mise en service rapide :</strong> Le modèle SaaS permet une intégration immédiate avec support et mises à jour inclus.</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 order-1 order-lg-2">
+                        <div class="card shadow-sm rounded shadow border border-secondary border-opacity-25 sticky-top bg-custom-light-dark" style="top: 20px;">
+                            <div class="card-body">
+                                <h5 class="fw-bold">Infos clés</h5>
+                                <ul class="list-unstyled mb-0">
+                                    <li class="mb-2 ms-2"><strong>Framework :</strong> ITIL</li>
+                                    <li class="mb-2 ms-2"><strong>Compétences :</strong> Gérer le patrimoine informatique</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="mt-5 pt-4 border-top">
+                <a href="../projets.html" class="btn btn-outline-light">Retour aux réalisations</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark py-4 text-white">
+        <div class="container text-center">
+            <p class="mb-0 text-secondary">© 2025 - Portfolio BTS SIO - Hébergé sur GitHub Pages</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

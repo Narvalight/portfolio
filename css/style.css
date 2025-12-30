@@ -20,3 +20,9 @@
     border-right: none;
     border-bottom: none;
 }
+
+/* L'image prend toujours 80% de la largeur de sa div */
+.image-article {
+    width: auto;
+    max-width: 500px; /* Sécurité : elle ne grandira pas au-delà de 600px */
+}
