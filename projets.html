@@ -31,46 +31,71 @@
         </div>
     </nav>
 
-    <main class="flex-grow-1 container py-5 text-white">   
+<main class="flex-grow-1 container py-5 text-white">   
         <div class="mb-5">
             <h2 class="fw-bold mb-4 border-orange-start ps-3 text-white">Mes Réalisations</h2>
-            <div class="row g-4 mb-4">
+            
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4">
                 
                 <div class="col">
-                    <div class="card h-100 shadow-sm card-hover bg-dark">
+                    <div class="card h-100 shadow-sm card-hover bg-dark text-white border border-secondary border-opacity-25">
+                        <img src="img/projet-hotel-rabanov.png" class="card-img-top" alt="Projet Transversal Hôtel">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title text-white">Projet Transversal : Complexe Hôtelier</h5>
+                            <p class="card-text small text-white-50 flex-grow-1">Collaboration SLAM/SISR pour concevoir l'architecture, la base de données, un site web PHP de réservation et une application de gestion en C#.</p>
+                            <div class="mt-2">
+                                <span class="badge bg-primary">C#</span>
+                                <span class="badge bg-success">PHP</span>
+                                <span class="badge bg-danger">HTML / CSS</span>
+                                <span class="badge bg-info text-dark">SQL</span>
+                                <span class="badge bg-primary">Wordpress</span>
+                            </div>
+                            <a href="realisations/article-projet-hotel.html" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 shadow-sm card-hover bg-dark text-white border border-secondary border-opacity-25">
                         <img src="img/ITIL.png" class="card-img-top" alt="Gestion de Stock">
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <h5 class="card-title text-white">Logiciels de gestion de parc informatique</h5>
-                            <p class="card-text small text-white">Analyse et comparatif de logiciels de gestion de parc informatique et de leurs niveaux d'intégration ITIL.</p>
-                            <span class="badge bg-success">ITIL</span>
+                            <p class="card-text small text-white-50 flex-grow-1">Analyse et comparatif de logiciels de gestion de parc informatique et de leurs niveaux d'intégration ITIL.</p>
+                            <div class="mt-2">
+                                <span class="badge bg-success">ITIL</span>
+                            </div>
                             <a href="realisations/article-comparatif-itil.html" class="stretched-link"></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col">
-                    <div class="card h-100 shadow-sm card-hover bg-dark">
+                    <div class="card h-100 shadow-sm card-hover bg-dark text-white border border-secondary border-opacity-25">
                         <img src="img/LAMP.png" class="card-img-top" alt="Site Web">
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <h5 class="card-title text-white">Installation LAMP</h5>
-                            <p class="card-text small text-white">Mise en place de manière guidée de la très répendue installation LAMP.</p>
-                            <span class="badge bg-secondary">Linux - Debian 13.2</span>
-                            <span class="badge bg-danger">Apache</span>
-                            <span class="badge bg-info">MySQL</span>
-                            <span class="badge bg-primary">PHP</span>
+                            <p class="card-text small text-white-50 flex-grow-1">Mise en place de manière guidée de la très répandue installation LAMP.</p>
+                            <div class="mt-2">
+                                <span class="badge bg-secondary">Debian 13.2</span>
+                                <span class="badge bg-danger">Apache</span>
+                                <span class="badge bg-info text-dark">MySQL</span>
+                                <span class="badge bg-primary">PHP</span>
+                            </div>
                             <a href="realisations/article-install-lamp.html" class="stretched-link"></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col">
-                    <div class="card h-100 shadow-sm card-hover bg-dark">
+                    <div class="card h-100 shadow-sm card-hover bg-dark text-white border border-secondary border-opacity-25">
                         <img src="img/Wordpress.png" class="card-img-top" alt="Scripting">
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <h5 class="card-title text-white">Prise en main de l'outil Wordpress</h5>
-                            <p class="card-text small text-white">Découverte de l'outil WordPress, de son fonctionnement et utilisation des premiers plugins.</p>
-                            <span class="badge bg-primary">WordPress</span>
-                            <span class="badge bg-secondary">Linux - Debian 12</span>
+                            <p class="card-text small text-white-50 flex-grow-1">Découverte de l'outil WordPress, de son fonctionnement et utilisation des premiers plugins.</p>
+                            <div class="mt-2">
+                                <span class="badge bg-primary">WordPress</span>
+                                <span class="badge bg-secondary">Debian 12</span>
+                            </div>
                             <a href="realisations/article-wordpress.html" class="stretched-link"></a>
                         </div>
                     </div>
@@ -78,7 +103,6 @@
 
             </div>
         </div>
-
     </main>
 
     <footer class="bg-dark py-4 text-white">

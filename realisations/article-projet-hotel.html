@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Réalisations</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100 bg-custom-dark text-white"></body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="../index.html">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="../presentation.html">Moi & CV</a></li>
+                <li class="nav-item"><a class="nav-link active" href="../projets.html">Réalisations</a></li>
+                <li class="nav-item"><a class="nav-link" href="../veille-info.html">Veille</a></li>
+                <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- <div id="navbar-placeholder"></div> -->
+<main class="flex-grow-1 container py-5 text-white">
+
+    <div class="py-3">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-lg-9 order-2 order-lg-1">
+
+                    <h2 class="h3 fw-bold mb-3 border-orange-start ps-3">Contexte du Projet</h2>
+                    <p>Dans le cadre de notre formation, nous avons été mis en situation de projet pour tester nos
+                        compétences et capacités acquises pendant l'année. Pour ce faire, les enseignants nous ont
+                        répartis en groupes de 4, composés de <strong>2 développeurs (SLAM)</strong> et <strong>2
+                            techniciens de réseau (SISR)</strong>.</p>
+                    <p>L'objectif était de simuler l'écosystème numérique complet d'un hôtel : la mise en place d'une
+                        infrastructure réseau robuste d'un côté, et de l'autre, la création des sites web et
+                        applications nécessaires à son bon fonctionnement. Ma spécialité étant axée sur le
+                        développement, cet article détaillera principalement la partie logicielle et applicative.</p>
+
+                    <h2 class="h3 fw-bold mt-5 mb-3 border-orange-start ps-3">Modélisation et Structure de la Base de
+                        Données</h2>
+                    <p>Première étape cruciale : la conception de la base de données indispensable au bon fonctionnement
+                        de toutes nos futures applications. En binôme avec mon camarade de l'option SLAM, nous avons
+                        commencé par concevoir le <strong>MCD (Modèle Conceptuel de Données)</strong>.</p>
+                    <p>À l'issue de cette modélisation, nous avons produit le MLD (Modèle Logique de Données) puis
+                        rédigé le script SQL de création. Cette base de données centralisée a immédiatement été mise à
+                        disposition pour le déploiement sur l'infrastructure réseau.</p>
+
+                    <div class="my-4 p-2 bg-dark rounded-3 border border-secondary border-opacity-25 text-center">
+                        <img src="../img/MCD.png" alt="Modèle Conceptuel de Données - Hôtel"
+                            class="img-fluid rounded shadow-sm">
+                        <p class="small text-secondary mt-2 mb-0"><em>Figure 1 : Modèle Conceptuel de Données (MCD) de
+                                l'application hôtelière.</em></p>
+                    </div>
+
+                    <h2 class="h3 fw-bold mt-5 mb-3 border-orange-start ps-3">Site Vitrine sous WordPress</h2>
+                    <p>La deuxième tâche consistait à concevoir un site internet vitrine pour l'hôtel fictif. Son but
+                        principal était d'accroître la visibilité en ligne de l'établissement et de mettre en valeur ses
+                        services.</p>
+                    <p>Une attention particulière a été portée à la mise en conformité vis-à-vis des législations
+                        françaises et européennes (<strong>RGPD</strong>), via l'intégration d'un module de consentement
+                        pour les cookies et la rédaction des pages de mentions légales. Bien que mon équipier ait pris
+                        le lead sur cette partie, j'ai pu suivre de près son intégration.</p>
+
+                    <div class="row my-4 g-3">
+                        <div class="col-md-6">
+                            <div class="p-2 bg-dark rounded-3 border border-secondary border-opacity-25 text-center">
+                                <img src="../img/wordpress-accueil.png" alt="Accueil Site Vitrine WordPress"
+                                    class="img-fluid rounded">
+                                <p class="small text-secondary mt-2 mb-0"><em>Vue d'ensemble du site vitrine
+                                        WordPress.</em></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-2 bg-dark rounded-3 border border-secondary border-opacity-25 text-center">
+                                <img src="../img/wordpress-rgpd.png" alt="Conformité RGPD et Mentions Légales"
+                                    class="img-fluid rounded">
+                                <p class="small text-secondary mt-2 mb-0"><em>Gestion de la conformité RGPD et mentions
+                                        légales.</em></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="h3 fw-bold mt-5 mb-3 border-orange-start ps-3">Application Lourde C# (.NET) : Gestion
+                        des Clients et Fidélité</h2>
+                    <p>J'ai été le développeur principal sur cette troisième tâche : la création d'une application de
+                        bureau dédiée à la gestion interne de la clientèle, des séjours et des programmes de fidélité.
+                        Pour ce faire, nous avons utilisé la <strong>Programmation Orientée Objet (POO)</strong> sous
+                        l'environnement C#.</p>
+                    <p>L'utilisation des classes objets métiers (<i>Client</i>, <i>Sejour</i>, <i>Fidelite</i>) a rendu
+                        la structure logique très simple à manipuler. Pour le système de fidélité, j'ai notamment mis en
+                        œuvre le concept d'<strong>héritage</strong> en créant des sous-classes spécifiques pour les
+                        différents statuts de l'hôtel : <strong>Bronze, Argent et Or</strong>.</p>
+
+                    <div class="p-3 bg-dark border-4 rounded-3 my-4 border-start border-danger">
+                        <p class="mb-1 text-danger fw-bold"><i class="bi bi-exclamation-triangle-fill me-2"></i>Défi
+                            Technique : Problème d'accès à MariaDB</p>
+                        <p class="small mb-2 text-white-50">L'établissement d'une liaison fonctionnelle via le réseau
+                            entre notre application C# et la base de données s'est révélé complexe.</p>
+                        <p class="small mb-0"><strong>Diagnostic & Résolution :</strong> Bien que le serveur configuré
+                            par nos camarades SISR fonctionnait parfaitement en local, la configuration initiale des
+                            ports d'accès distants sur MariaDB interdisait les connexions extérieures. Après
+                            identification et ajustement des règles d'accès au niveau des ports et des privilèges de
+                            l'utilisateur MariaDB, l'application est devenue pleinement opérationnelle.</p>
+                    </div>
+
+                    <h2 class="h3 fw-bold mt-5 mb-3 border-orange-start ps-3">Plateforme Web de Réservation en PHP
+                    </h2>
+                    <p>La dernière tâche concernait le développement de l'espace client web permettant la création de
+                        compte et la réservation de séjours en ligne. Entre l'ASP.NET et le PHP, notre choix s'est porté
+                        sur le <strong>PHP</strong>, car sa mise en œuvre était plus accessible et facilitait également
+                        la tâche de nos collègues SISR qui n'avaient pas à déployer un serveur IIS complexe sous Windows
+                        Server.</p>
+                    <p>Cette partie a été de loin la plus longue et complexe du projet. Bien que les objectifs
+                        fonctionnels fussent simples, j'ai fait face à de multiples bugs sur les contrôles de saisies
+                        utilisateurs (générant des plantages critiques).</p>
+
+                    <div class="p-3 bg-dark border-4 rounded-3 my-4 border-start border-warning">
+                        <p class="mb-1 text-warning fw-bold"><i class="bi bi-tools me-2"></i>Ajustement de la Base de
+                            Données</p>
+                        <p class="small mb-0">Lors du codage des formulaires de réservation, des conflits de types de
+                            données sont apparus entre les variables PHP et les colonnes de la base de données. Il a
+                            donc fallu ré-intervenir sur notre script SQL d'origine pour modifier la structure des
+                            tables et l'adapter aux besoins réels du site web.</p>
+                    </div>
+
+                    <p>Malgré ces imprévus, toutes les fonctionnalités ont été finalisées dans les délais impartis,
+                        respectant l'ensemble du cahier des charges fourni par nos professeurs.</p>
+
+                    <div class="row my-4 g-3">
+                        <div class="col-md-6">
+                            <div class="p-2 bg-dark rounded-3 border border-secondary border-opacity-25 text-center">
+                                <img src="../img/php-inscription-client.png" alt="Espace Client - Inscription"
+                                    class="img-fluid rounded">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-2 bg-dark rounded-3 border border-secondary border-opacity-25 text-center">
+                                <img src="../img/php-reservation.png" alt="Formulaire de Réservation de chambre"
+                                    class="img-fluid rounded">
+                            </div>
+                        </div>
+                        <p class="small text-secondary text-center mt-1 mb-0"><em>Vues de l'interface de création de
+                                compte et du module de réservation PHP.</em></p>
+                    </div>
+
+                    <h2 class="h3 fw-bold mt-5 mb-3 border-orange-start ps-3">Déploiement et Bilan du Projet</h2>
+                    <p>À l'exception de l'application lourde C# (exécutée côté client), toutes nos productions
+                        applicatives (la base de données MariaDB, le site WordPress et la plateforme de réservation PHP)
+                        ont été déployées avec succès sur l'infrastructure de serveurs Linux / Windows préparée par
+                        l'équipe SISR.</p>
+                    <p>Ce projet particulièrement complet s'inscrit directement dans la compétence <strong>"Travailler
+                            en mode projet" (Bloc 1)</strong>. Il m'a permis d'améliorer significativement mes
+                        compétences en résolution de bugs techniques et m'a entraîné à la <strong>"Mise à disposition de
+                            services à des utilisateurs"</strong> à travers l'application web PHP. Ce fut une expérience
+                        transversale passionnante pour apprendre à faire collaborer nos deux spécialités informatiques.
+                    </p>
+
+                </div>
+
+                <div class="col-lg-3 order-1 order-lg-2">
+                    <div class="card shadow-sm rounded border border-secondary border-opacity-25 sticky-top bg-custom-light-dark"
+                        style="top: 20px;">
+                        <div class="card-body">
+                            <h5 class="fw-bold text-white mb-3"><i class="bi bi-info-circle me-2"></i>Infos Clés</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2 ms-2"><strong>Contexte :</strong> Projet Transversal Équipe (2 SLAM / 2
+                                    SISR)</li>
+                                <li class="mb-2 ms-2"><strong>Modélisation :</strong> MCD, MLD (SQL)</li>
+                                <li class="mb-2 ms-2"><strong>CMS :</strong> WordPress (RGPD compliant)</li>
+                                <li class="mb-2 ms-2"><strong>Gestion Client :</strong> C# (.NET Core, POO, Héritage)
+                                </li>
+                                <li class="mb-2 ms-2"><strong>Web Dynamique :</strong> PHP 8 / MariaDB</li>
+                                <li class="mb-2 ms-2"><strong class="text-white">Compétences :</strong>
+                                    <span class="badge bg-primary mt-1 d-block text-wrap">Travailler en mode projet
+                                        (Bloc 1)</span>
+                                    <span class="badge bg-success mt-1 d-block text-wrap">Mise à disposition de
+                                        services</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-5 pt-4 border-top border-secondary border-opacity-25">
+                <a href="../projets.html" class="btn btn-outline-light">
+                    <i class="bi bi-arrow-left me-2"></i>Retour aux réalisations
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-dark py-4 text-white">
+    <div class="container text-center">
+        <p class="mb-0 text-secondary">© 2025 - Portfolio BTS SIO - Hébergé sur GitHub Pages</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/script.js"></script>
+</body>
+
+</html>
