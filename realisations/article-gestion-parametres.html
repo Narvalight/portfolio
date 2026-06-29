@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Réalisations</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100 bg-custom-dark text-white">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="../index.html">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="../presentation.html">Moi & CV</a></li>
+                <li class="nav-item"><a class="nav-link active" href="../projets.html">Réalisations</a></li>
+                <li class="nav-item"><a class="nav-link" href="../veille-info.html">Veille</a></li>
+                <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="flex-grow-1 container py-5 text-white">   
+    <div class="py-3">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-lg-9 order-2 order-lg-1">
+
+                    <h2 class="h3 fw-bold mb-3 border-orange-start ps-3">Contexte Général & Besoins Métiers</h2>
+                    <p class="mb-3">Au cours de mon stage de fin d'année au sein du service de développement informatique de l'entreprise <strong>Huet / JH Industries</strong> (acteur majeur spécialisé dans la menuiserie industrielle et les ouvertures), j'ai été affecté à la conception autonome et à l'évolution d'une solution applicative complète d'administration. Le système d'information interne de l'entreprise requiert la manipulation quotidienne de volumineux objets métiers, de configurations globales et des environnements applicatifs associés (recette, test, production).</p>
+                    <p class="mb-4">L'enjeu de cette réalisation consistait à bâtir un système d'architecture n-tiers robuste, offrant aux gestionnaires la capacité d'exécuter de manière sécurisée l'ensemble des opérations <strong>CRUD</strong> (Create, Read, Update, Delete). L'application finale devait impérativement éradiquer les risques d'anomalies de saisie manuelle et les désynchronisations de flux entre les interfaces clientes et les bases de données de production.</p>
+
+                    <h2 class="h3 fw-bold mt-5 mb-3 border-orange-start ps-3">Stratégie et Processus d'Apprentissage d'Angular</h2>
+                    <p class="mb-3">L'un des défis majeurs de cette mission résidait dans l'obligation d'utiliser le framework <strong>Angular</strong> et le langage <strong>TypeScript</strong>, deux technologies qui m'étaient totalement inconnues à mon arrivée. N'ayant manipulé que des structures plus traditionnelles en formation, j'ai dû mettre en place une méthodologie d'auto-formation intensive dès les premiers jours du projet.</p>
+                    <p class="mb-3">Mon processus d'apprentissage s'est articulé autour de trois axes complémentaires :</p>
+                    <ul class="mb-4">
+                        <li class="mb-2"><strong>Assimilation conceptuelle :</strong> Étude approfondie de la documentation officielle d'Angular pour comprendre la philosophie des composants standalone, le cycle de vie d'un composant (notamment le hook <code>ngOnInit</code>), la gestion des modules réutilisables et le mécanisme de routage.</li>
+                        <li class="mb-2"><strong>Prise en main de TypeScript :</strong> Apprentissage du typage statique, de la manipulation avancée des objets et de la programmation asynchrone (gestion des flux avec RxJS, utilisation des observables et des promesses).</li>
+                        <li class="mb-2"><strong>Pratique par micro-projets :</strong> Développement préalable de petites interfaces isolées (formulaires simples, liaisons de données bidirectionnelles ou <i>two-way data binding</i>) avant d'attaquer directement le code source lié au cœur de l'infrastructure de JH Industries.</li>
+                    </ul>
+
+                    <h2 class="h3 fw-bold mt-5 mb-3 border-orange-start ps-3">Environnement riche et très complexe</h2>
+                    <p class="mb-3">En fin de première semaine, j'ai été confronté à une situation de blocage. Vouloir mener de front la conception de la base de données, la configuration d'une API C# lourde et la construction de l'interface Angular s'est traduit par des difficultés. Ma compréhension de chacunes des couches techniques étant à ce moment là très partielle, le début de ce nouveau projet s'est avéré très compliqué. L'utilisation d'Angular était notamment le point le plus bloquant, n'ayant quasiment aucune expérience sur l'utilisation de se Framework. De plus, j'ai voulu m'appuyer sur un projet web déjà existant mais celui-ci était trop complexe inutilement comme me l'ont dit les autres développeurs.</p>
+                    
+                    <div class="p-4 bg-dark border-4 rounded-3 my-4 border-start border-danger bg-custom-light-dark">
+                        <h4 class="h6 text-danger fw-bold mb-2">Réajustements (Semaine 2)</h4>
+                        <p class="small mb-0">Loin de baisser les bras, j'ai pris le temps de discuter avec mon tuteur de manière à être un peu plus aiguillé sur le début. Ainsi, A l'issue de cette première semaine peu fructueuse sur ce nouveau projet, mon tuteur de stage à recréé un projet en laissant quelques méthodes utiles concernant la connexion à l'API et la récupération des données. En repartant de ça j'ai pu me lancer de manière efficace dans le projet. Toutefois, j'ai tout de même rencontré des difficultés au niveau de la liaison de certaines couche techniques en raisons de la complexité de celle-ci. Néanmoins, en prenant le temps de rechercher par moi-même de manière rigoureuse, j'ai réussi à régler mes problèmes de manière autonome au fur et à mesure.</p>
+                    </div>
+
+                    <h2 class="h3 fw-bold mt-5 mb-3 border-orange-start ps-3">Modélisation SQL Server et Architecture Back-End C#</h2>
+                    <p class="mb-3">Une fois la méthodologie stabilisée, j'ai orchestré la couche de persistance des données en rédigeant les scripts relationnels sous <strong>Oracle</strong>. J'ai veillé scrupuleusement au respect des normes de l'entreprise (conventions de nommage, types de données uniformisés, commentaire de colonnes et de tables) et documenté chaque table avant son déploiement sur l'environnement de test.</p>
+                    <p class="mb-4">Pour exposer ces données, j'ai travaillé sous Visual Studio pour faire évoluer le <strong>Framework interne en C#</strong>. J'ai codé les modèles de données représentant nos entités SQL, puis j'ai compilé et régénéré les fichiers de liaison dynamiques (les bibliothèques <code>.dll</code>). Cette étape m'a permis de déployer une instance locale de l'API d'entreprise sur mon poste afin de tester et de valider les premiers endpoints destinés à alimenter le site web. De plus, j'ai également du rajouter des méthodes dans l'API, pour la nouvelle table que j'ai créé mais également pour une autre table déjà existante, cette dernière étant également nécessaire au fonctionnement de mon application web.</p>
+
+                    <h2 class="h3 fw-bold mt-5 mb-3 border-orange-start ps-3">Résolution des Problèmes Logiques et Désynchronisations</h2>
+                    <p class="mb-3">Au cours de la troisième semaine, lors de l'intégration de la gestion des environnements dépendants des paramètres, de nouvelles difficultés techniques majeures sont apparues. Côté client, l'interface graphique souffrait de latences et de désynchronisations : les listes déroulantes (dropdowns) ne reflétaient pas l'état réel des données renvoyées par l'API, et les contrôles de type <code>input</code> refusaient de se mettre à jour en raison d'un mauvais déclenchement d'événements.</p>
+                    <p class="mb-3">Pour résoudre ces anomalies, j'ai mené les actions suivantes :</p>
+                    <ul class="mb-4">
+                        <li class="mb-2"><strong>Restructuration des services Angular :</strong> Réécriture des mécanismes d'abonnement (subscribes) pour forcer le rafraîchissement des composants dès la validation d'une modification. De cette manière, les valeurs saisies automatiquement par l'application qui n'étaient pas détectées par le navigateur sont désormais bel et bien prises en compte.</li>
+                        <li class="mb-2"><strong>Correction d'une faille logique en Base de Données :</strong> J'ai identifié que la suppression d'un paramètre parent laissait des lignes "orphelines" d'environnements en base, violant les contraintes d'intégrité. J'ai restructuré les requêtes de l'API pour implémenter une <strong>suppression en cascade</strong> propre et sécurisée.</li>
+                        <li class="mb-2"><strong>Robustesse des formulaires :</strong> Implémentation de blocs <code>try/catch</code> systématiques côté API pour intercepter les anomalies de requêtes et déploiement de contrôles de saisie rigoureux côté client pour rejeter les formats invalides. Avant cette modification, le contrôle de saisie était effectué via l'API, ce qui n'était pas le comportement attendu et empêchait une potentielle réutilisation de ces méthodes API dans des contextes différents.</li>
+                    </ul>
+
+                    <div class="my-4 p-2 bg-dark rounded-3 border border-secondary border-opacity-25 text-center">
+                        <img src="../img/img-setting-editor.png" alt="Editeur de paramètres et d'environnements"
+                            class="img-fluid rounded shadow-sm">
+                        <p class="small text-secondary mt-2 mb-0"><em>Aperçu de l'éditeur de paramètres et d'environnements</em></p>
+                    </div>
+
+                    <h2 class="h3 fw-bold mt-5 mb-3 border-orange-start ps-3">Optimisations Algorithmiques en TypeScript</h2>
+                    <p class="mb-3">Afin de garantir un confort d'utilisation optimal face à des listes contenant des centaines de lignes de paramètres, j'ai implémenté des solutions algorithmiques avancées en TypeScript en semaine 4 :</p>
+                    <ul class="mb-4">
+                        <li class="mb-2"><strong>Tri dynamique en mémoire :</strong> Utilisation des fonctions natives <code>.sort()</code> et <code>.reverse()</code> pour classer instantanément les tableaux d'objets par ordre alphabétique croissant ou décroissant sans solliciter à nouveau le serveur.</li>
+                        <li class="mb-2"><strong>Parallélisation des flux asynchrones :</strong> Remplacement des appels HTTP successifs par la structure <code>Promise.all</code>, permettant de lancer simultanément les requêtes d'alimentation de l'écran et de diviser par deux le temps de chargement perçu.</li>
+                        <li class="mb-2"><strong>Conception du "Mode Lecture" :</strong> Développement d'une couche d'affichage protectrice permettant de consulter les données à l'écran sans risque de modification ou de suppression accidentelle par inadvertance.</li>
+                    </ul>
+
+                    <div class="my-4 p-2 bg-dark rounded-3 border border-secondary border-opacity-25 text-center">
+                        <img src="../img/img-setting-reader.png" alt="Editeur de paramètres et d'environnements"
+                            class="img-fluid rounded shadow-sm">
+                        <p class="small text-secondary mt-2 mb-0"><em>Aperçu de l'éditeur de paramètres et d'environnements</em></p>
+                    </div>
+
+                    <h2 class="h3 fw-bold mt-5 mb-3 border-orange-start ps-3">Centralisation sur le Portail et Verrouillage de la Sécurité</h2>
+                    <p class="mb-3">La dernière semaine a concrétisé le projet par une phase de refactoring. Après une revue de code rigoureuse menée avec mon maître de stage, j'ai épuré le projet en factorisant tous les blocs de code redondants dans des services transversaux. J'ai ensuite intégré l'application finale dans un <strong>"Lanceur d'Applications d'Administration Web"</strong> que je devais développé moi-même dans l'optique de pouvoir centraliser l'accès aux éventuels et futurs applications web de l'entreprise.</p>
+                    <p class="mb-3">La sécurité des données stratégiques de l'entreprise a été verrouillée à double tour :</p>
+                    <ul class="mb-4">
+                        <li class="mb-2"><strong>Sécurité applicative (Front-End) :</strong> Configuration de <code>Angular Guards</code> rattachés au routeur, analysant les profils utilisateurs pour bloquer instantanément toute tentative d'accès à une URL d'administration non autorisée.</li>
+                        <li class="mb-2"><strong>Sécurité des données (Back-End) :</strong> Injection de contrôles par <code>Headers HTTP</code> au niveau de l'API C# pour rejeter les requêtes non authentifiées à la source, complétée par le masquage des traces de pile d'exécution (stacktraces) en cas d'erreur.</li>
+                    </ul>
+
+                    <h2 class="h3 fw-bold mt-5 mb-3 border-orange-start ps-3">Optimisations Finales</h2>
+                    <p class="mb-3">Dans mes tests finaux pour vérifier le bon fonctionnement de l'application, je me suis rendu compte que quelques bugs et comportement innatendus s'était immiscés dans mon code. Malgré le temps limité dont je disposais, j'ai réussi à régler tous les problèmes majeurs qu'il restait avant la présentation finale à mon maître de stage.</p>
+                    <p class="mb-3">Parmis ces problèmes, il y en avait deux principaux qui perturbaient le fonctionnement de mon application web :</p>
+                    <ul class="mb-4">
+                        <li class="mb-2"><strong>Lenteur de Chargement des Paramètres Triés :</strong>L'ajout de headers dans les entêtes nécessitait l'interception des requêtes pour l'injection des headers. Puisque toutes les requêtes étaient interceptés, le temps de traitement de la recherche a également augmenté. Pour remédier à celà, j'ai modifier le fonctionnement de mes appels API de manières à n'en faire qu'un seul. De cette manière, le temps de traitement des données est devenu quasiment instantané, gagnant en rapidité par rapport à ma solution initiale.</li>
+                        <li class="mb-2"><strong>Disfonctionnement de la Recherche de Tri par Environnement</strong>La modification du fonctionnement de la recherche par environnement à complètement cassé la recherche par environnement car les objets lu pour l'affichage des données n'étaient plus les bons. J'ai donc créer une nouvelle méthode permettant de récupérer les bons objets, récupérant ainsi un affichage fonctionnel.</li>
+                    </ul>
+
+                    <h2 class="h3 fw-bold mt-5 mb-3 border-orange-start ps-3">Bilan du Projet et Validation Finale</h2>
+                    <p class="mb-3">Le stage s'est achevé le vendredi par une démonstration en direct de la solution devant l'ensemble des développeurs du service. Les retours ont validé la vélocité de l'interface et l'efficacité des filtres algorithmiques mis en place.</p>
+                    <p class="mb-0">Cette réalisation atteste de la validation de nombreuses compétences du <strong>Bloc 1 du référentiel BTS SIO SLAM</strong>. Elle prouve ma capacité à gérer le patrimoine informatique d'une structure d'envergure, à surmonter les obstacles techniques par une auto-formation efficace, à collaborer au sein d'une équipe de développement et à faire évoluer durablement une solution applicative d'entreprise.</p>
+
+                </div>
+
+                <div class="col-lg-3 order-1 order-lg-2">
+                    <div class="card shadow-sm rounded border border-secondary border-opacity-25 sticky-top bg-custom-light-dark"
+                        style="top: 20px;">
+                        <div class="card-body">
+                            <h5 class="fw-bold text-white mb-3"><i class="bi bi-info-circle me-2"></i>Infos Clés</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2 ms-2"><strong>Entreprise :</strong> Huet / JH Industries</li>
+                                <li class="mb-2 ms-2"><strong>Type :</strong> Application Web & API</li>
+                                <li class="mb-2 ms-2"><strong>Back-End :</strong> C# / API Web / SQL</li>
+                                <li class="mb-2 ms-2"><strong>Front-End :</strong> Angular / TypeScript</li>
+                                <li class="mb-2 ms-2"><strong>Sécurité :</strong> Guards, Headers HTTP</li>
+                                <li class="mb-2 ms-2"><strong class="text-white">Compétences :</strong>
+                                    <span class="badge bg-success mt-1 d-block text-wrap">Organiser son développement professionnel (Bloc 1)</span>
+                                    <span class="badge bg-secondary mt-1 d-block text-wrap">Gérer le patrimoine informatique (Bloc 1) </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-5 pt-4 border-top border-secondary border-opacity-25">
+                <a href="../projets.html" class="btn btn-outline-light">
+                    <i class="bi bi-arrow-left me-2"></i>Retour aux réalisations
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-dark py-4 text-white">
+    <div class="container text-center">
+        <p class="mb-0 text-secondary">© 2025 - Portfolio BTS SIO - Hébergé sur GitHub Pages</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/script.js"></script>
+</body>
+
+</html>

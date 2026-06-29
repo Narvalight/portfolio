@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Veille Informationnelle</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100 bg-custom-dark text-white">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="../index.html">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="../presentation.html">Moi & CV</a></li>
+                <li class="nav-item"><a class="nav-link" href="../projets.html">Réalisations</a></li>
+                <li class="nav-item"><a class="nav-link active" href="../veille-info.html">Veille</a></li>
+                <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="flex-grow-1 container py-5 text-white">
+
+    <div class="py-3">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-lg-9 order-2 order-lg-1">
+
+                    <h2 class="h3 fw-bold mb-3 border-orange-start ps-3">Contexte de la Mesure</h2>
+                    <p>Dans le cadre d'une course mondiale à la suprématie technologique, le gouvernement des États-Unis a durci ses réglementations concernant les modèles d'intelligence artificielle dits de « frontière » (les modèles les plus avancés du marché). Face aux enjeux de sécurité nationale, de cybersécurité offensive et de guerre économique, de nouvelles directives visent à contrôler drastiquement l'accès à ces technologies.</p>
+                    <p>Ces décrets imposent des restrictions strictes non seulement sur l'exportation des architectures de modèles, mais ciblent également l'accès à la puissance de calcul pour les ressortissants étrangers et entités non américaines jugées stratégiquement à risque.</p>
+
+                    <h2 class="h3 fw-bold mt-5 mb-3 border-orange-start ps-3">Les piliers des restrictions d'accès</h2>
+                    <p>Les mesures récemment mises en place s'articulent autour de deux grands axes réglementaires :</p>
+                    <ul>
+                        <li><strong>Le protocole « Know Your Customer » (KYC) pour le Cloud :</strong> Les fournisseurs de cloud américains (AWS, Microsoft Azure, Google Cloud) ont désormais l'obligation de vérifier l'identité de leurs clients étrangers. L'objectif est d'empêcher l'entraînement ou l'utilisation de modèles d'IA avancés par des entités non américaines via des infrastructures délocalisées.</li>
+                        <li><strong>Le contrôle des seuils de calcul (Compute Thresholds) :</strong> Les restrictions ciblent automatiquement tout modèle entraîné avec une puissance de calcul supérieure à une certaine limite de FLOPs (opérations à virgule flottante), bloquant ainsi le partage des technologies de pointe ou des codes sources sans licence gouvernementale explicite.</li>
+                    </ul>
+
+                    <div class="p-3 bg-dark border-4 rounded-3 my-4 border-start border-danger">
+                        <p class="mb-1 text-danger fw-bold">Le concept de « Cloud Poaching »</p>
+                        <p class="small mb-0 "><strong>Enjeu :</strong> Les restrictions matérielles précédentes (interdiction d'exporter les puces NVIDIA H100/B200 vers certains pays) étaient contournées en louant de la puissance computationnelle à distance via des serveurs basés aux États-Unis. Ces nouvelles mesures comblent cette faille juridique en interdisant directement la location de puissance informatique pour l'IA aux utilisateurs non accrédités.</p>
+                    </div>
+
+                    <h2 class="h3 fw-bold mt-5 mb-3 border-orange-start ps-3">Impacts à court terme</h2>
+                    <p>À brève échéance, ces mesures provoquent de forts remous au sein de l'écosystème open-source et académique mondial :</p>
+                    <p><strong>Ralentissement de la recherche collaborative :</strong> De nombreux chercheurs et ingénieurs étrangers résidant en dehors des États-Unis (ou travaillant pour des filiales internationales) subissent des restrictions d'accès aux dépôts privés et aux API de tests des laboratoires de recherche américains (OpenAI, Anthropic, Meta).</p>
+                    <p><strong>Complexité de conformité :</strong> Les startups et entreprises européennes qui s'appuient sur des briques technologiques américaines doivent faire face à des audits de conformité plus lourds pour garantir qu'aucun utilisateur non autorisé ne puisse manipuler ou auditer les modèles sous-jacents.</p>
+
+                    <h2 class="h3 fw-bold mt-5 mb-3 border-orange-start ps-3">Impacts à long terme</h2>
+                    <p>À plus long terme, la stratégie américaine risque d'accélérer une scission profonde de l'industrie technologique globale :</p>
+                    
+                    <div class="p-3 bg-dark border-4 rounded-3 my-4 border-start border-warning">
+                        <p class="mb-1 text-warning fw-bold"></i>Bifurcation technologique et IA Souveraines</p>
+                        <p class="small mb-0 ">En fermant l'accès à ses modèles les plus avancés, les États-Unis poussent indirectement l'Europe et l'Asie à s'émanciper totalement. On observe déjà une accélération massive des investissements dans les <strong>IA Souveraines</strong> (comme Mistral AI en France ou des initiatives étatiques asiatiques) afin de garantir une indépendance technologique et ne pas dépendre des décisions unilatérales de Washington.</p>
+                    </div>
+                    
+                    <p>Cette fragmentation pourrait également affaiblir les standards de sécurité mondiaux : l'absence de coopération internationale rendra l'établissement de règles communes sur l'éthique et la gouvernance de l'IA particulièrement difficile, chaque bloc développant ses technologies de frontière de manière opaque.</p>
+
+                    <h2 class="h3 fw-bold mt-5 mb-3 border-orange-start ps-3">Bilan pour ma Veille Technologique</h2>
+                    <p>Le suivi de ces mesures est capital dans le cadre du profil SLAM. Il démontre que le développement logiciel moderne n'est pas uniquement lié à des choix de langages ou d'algorithmes, mais est profondément influencé par la géopolitique du matériel informatique et les barrières réglementaires. Comprendre la provenance d'un modèle et l'indépendance de son hébergement fait désormais partie intégrante des compétences de gestion des risques d'un développeur.</p>
+
+                </div>
+
+                <div class="col-lg-3 order-1 order-lg-2">
+                    <div class="card shadow-sm rounded border border-secondary border-opacity-25 sticky-top bg-custom-light-dark"
+                        style="top: 20px;">
+                        <div class="card-body">
+                            <h5 class="fw-bold text-white mb-3">Infos Clés</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2 ms-2"><strong>Sujet :</strong> Réglementations IA Frontier & Cloud</li>
+                                <li class="mb-2 ms-2"><strong>Territoire ciblé :</strong> États-Unis / International</li>
+                                <li class="mb-2 ms-2"><strong>Concepts :</strong> KYC Cloud, Compute Thresholds, IA Souveraine</li>
+                                <li class="mb-2 ms-2"><strong>Statut :</strong> Directives en cours de déploiement</li>
+                                <li class="mb-2 ms-2"><strong class="text-white">Compétences :</strong>
+                                    <span class="badge bg-success mt-1 d-block text-wrap">Organiser son développement professionnel (Veille Informationnelle) (Bloc 1)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-5 pt-4 border-top border-secondary border-opacity-25">
+                <a href="../veille-info.html" class="btn btn-outline-light">
+                    <i class="bi bi-arrow-left me-2"></i>Retour à la veille
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-dark py-4 text-white">
+    <div class="container text-center">
+        <p class="mb-0 text-secondary">© 2025 - Portfolio BTS SIO - Hébergé sur GitHub Pages</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/script.js"></script>
+</body>
+
+</html>

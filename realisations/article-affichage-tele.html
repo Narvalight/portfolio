@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Réalisations</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100 bg-custom-dark text-white">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="../index.html">Portfolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="../presentation.html">Moi & CV</a></li>
+                <li class="nav-item"><a class="nav-link active" href="../projets.html">Réalisations</a></li>
+                <li class="nav-item"><a class="nav-link" href="../veille-info.html">Veille</a></li>
+                <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="flex-grow-1 container py-5 text-white">
+
+    <div class="py-3">
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-lg-9 order-2 order-lg-1">
+
+                    <h2 class="h3 fw-bold mb-3 border-orange-start ps-3">Contexte de la Mission</h2>
+                    <p>Au cours de ma première semaine de stage au sein de l'entreprise <strong>Huet / JH Industries</strong>, le Directeur des Systèmes d'Information (DSI) m'a confié une mission d'optimisation de la communication interne. Le besoin exprimé était d'afficher des statistiques, des indicateurs de performance et des tableaux de bord en temps réel sur un écran de télévision positionné dans la salle des ingénieurs réseaux.</p>
+                    <p>L'objectif principal consistait à concevoir une application web capable de charger une liste d'URLs internes de supervision et de les afficher de façon intermittente, alternée et cyclique sans intervention humaine. J'ai mené à bien l'intégralité de ce projet en autonomie.</p>
+
+                    <h2 class="h3 fw-bold mt-5 mb-3 border-orange-start ps-3">Choix Technologiques et Initialisation</h2>
+                    <p>Pour répondre à ce besoin d'application, l'environnement de développement reposait sur le framework <strong>Angular</strong> et le langage <strong>TypeScript</strong>. N'ayant jamais manipulé Angular auparavant, la première phase de mon travail a nécessité une auto-formation rapide afin de prendre en main la structure d'un composant standalone moderne et l'architecture globale du framework.</p>
+                    <p>La solution imaginée exploite un fichier de configuration externe <code>config.json</code>. Ce fichier liste dynamiquement l'ensemble des sites à visiter ainsi que le temps d'affichage désiré pour chacun d'eux, offrant une grande souplesse d'administration pour la DSI sans avoir à recompiler le code applicatif.</p>
+
+                    <h2 class="h3 fw-bold mt-5 mb-3 border-orange-start ps-3">Implémentation du Chargement Asynchrone</h2>
+                    <p>Dès l'initialisation du composant (<code>ngOnInit</code>), l'application effectue une requête HTTP pour récupérer les paramètres du fichier JSON. Pour bloquer proprement l'exécution en attendant la configuration, j'ai utilisé l'opérateur <code>firstValueFrom</code> d'RxJS afin de transformer l'Observable en Promesse native :</p>
+
+<pre class="bg-dark p-3 rounded border border-secondary border-opacity-25 text-light-orange small"><code>try {
+  this.config = await firstValueFrom(this.http.get('./config.json'));
+  console.log('Configuration chargée avec succès.');
+} catch (error) {
+  console.error('Erreur lors du chargement de la config : ', error);
+  return;
+}
+this.lancerRotation();</code></pre>
+
+                    <h2 class="h3 fw-bold mt-5 mb-3 border-orange-start ps-3">Algorithme de Rotation Infinie</h2>
+                    <p>Une fois les données acquises, la méthode <code>lancerRotation()</code> prend le relais. Elle exécute une boucle <code>while (true)</code> chargée d'actualiser la cible de l'affichage. L'astuce algorithmique réside dans l'utilisation de l'opérateur <strong>modulo (%)</strong>, qui permet d'incrémenter le compteur à l'infini tout en s'assurant qu'il revienne automatiquement à 0 dès que la fin du tableau de sites est atteinte.</p>
+                    <p>Pour la gestion du temps, une fonction utilitaire <code>attendre</code> encapsule un <code>setTimeout</code> dans une Promesse, suspendant temporairement la boucle selon le délai extrait du fichier de configuration :</p>
+
+<pre class="bg-dark p-3 rounded border border-secondary border-opacity-25 text-light-orange small"><code>async lancerRotation() {
+  let compteur = 0;
+  const sites = this.config.sites;
+
+  const attendre = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+
+  while (true) {
+    console.log('Index actuel : ', compteur);
+    
+    const siteCourant = sites[compteur];
+    const urlSite = siteCourant[0];
+
+    this.iframeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(urlSite);
+    
+    let dureeAttente = this.config.useBaseRefreshInterval 
+      ? this.config.baseRefreshInterval 
+      : siteCourant[1];
+
+    await attendre(dureeAttente * 1000);
+
+    compteur = (compteur + 1) % sites.length;
+  }
+}</code></pre>
+
+                    <div class="p-3 bg-dark border-4 rounded-3 my-4 border-start border-danger">
+                        <p class="mb-1 text-danger fw-bold">Défi Technique : Protection XSS d'Angular</p>
+                        <p class="small mb-2 ">Par défaut, le mécanisme de sécurité d'Angular bloque l'injection dynamique d'URLs dans une balise <code>&lt;iframe&gt;</code> pour prévenir les failles de type Cross-Site Scripting (XSS).</p>
+                        <p class="small mb-0"><strong>Résolution :</strong> Pour contourner légitimement cette restriction dans notre contexte de confiance locale, j'ai injecté le service <code>DomSanitizer</code> de l'implémentation de la plateforme. La méthode <code>bypassSecurityTrustResourceUrl(urlSite)</code> a permis de marquer explicitement les URLs du JSON comme sécurisées pour le navigateur.</p>
+                    </div>
+
+                    <h2 class="h3 fw-bold mt-5 mb-3 border-orange-start ps-3">Déploiement et Bilan</h2>
+                    <p>Une fois les développements validés sur mon poste local, j'ai procédé au nettoyage du code et publié mes sources sur le GitLab de l'entreprise. Le livrable a été déployé avec succès sur le serveur de développement <strong>IIS (Internet Information Services)</strong> interne afin d'alimenter en continu le téléviseur de la salle réseau.</p>
+                    <p>Cette première réalisation m'a permis d'asseoir de fortes compétences issues du Bloc 1 de notre formation : la <strong>Mise à disposition d'un service informatique</strong> par le biais du déploiement IIS, la <strong>Planification d'activités</strong> en gérant mon autonomie face aux délais ainsi que l'<strong>Organisation de mon développement professionnel</strong> via une démarche d'auto-formation rigoureuse sur Angular.</p>
+
+                </div>
+
+                <div class="col-lg-3 order-1 order-lg-2">
+                    <div class="card shadow-sm rounded border border-secondary border-opacity-25 sticky-top bg-custom-light-dark"
+                        style="top: 20px;">
+                        <div class="card-body">
+                            <h5 class="fw-bold text-white mb-3"><i class="bi bi-info-circle me-2"></i>Infos Clés</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2 ms-2"><strong>Entreprise :</strong> Huet / JH Industries</li>
+                                <li class="mb-2 ms-2"><strong>Demandeur :</strong> DSI (Écran Supervision)</li>
+                                <li class="mb-2 ms-2"><strong>Framework :</strong> Angular (Standalone)</li>
+                                <li class="mb-2 ms-2"><strong>Langage :</strong> TypeScript / RxJS</li>
+                                <li class="mb-2 ms-2"><strong>Serveur :</strong> IIS</li>
+                                <li class="mb-2 ms-2"><strong class="text-white">Compétences :</strong>
+                                    <span class="badge bg-success mt-1 d-block text-wrap">Organiser son développement professionnel (Bloc 1)</span>
+                                    <span class="badge bg-secondary mt-1 d-block text-wrap">Répondre aux incidents et aux demandes d’assistance et d’évolution (Bloc 1) </span>
+                                    <span class="badge bg-warning mt-1 d-block text-wrap">Mettre à disposition des utilisateurs un service informatique (Bloc 1) </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-5 pt-4 border-top border-secondary border-opacity-25">
+                <a href="../projets.html" class="btn btn-outline-light">
+                    <i class="bi bi-arrow-left me-2"></i>Retour aux réalisations
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-dark py-4 text-white">
+    <div class="container text-center">
+        <p class="mb-0 text-secondary">© 2025 - Portfolio BTS SIO - Hébergé sur GitHub Pages</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/script.js"></script>
+</body>
+
+</html>
